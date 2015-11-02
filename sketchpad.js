@@ -84,6 +84,9 @@ $('#sh').click(function() {
     $('.square').mouseenter(function() {
 		$('.square').css("background-color","#fff");
 			shader($(this));
+				$('.square').mouseleave(function() {
+				$(this).css("background-color", "#fff");		
+			});	
 	});
 });
 
