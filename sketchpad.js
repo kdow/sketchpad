@@ -32,14 +32,14 @@ $('#cs').click(function() {
 
 var userInput = prompt("How many squares per side? Limit 100.");
 
-	if (isNaN(userInput)===true || (userInput === null)) {
-		alert ("You did not enter a number. Please input a number up to 100 to create a new sketchpad");
-	} else if (userInput > 100) {
-		alert ("Please enter a number under 100");
-	} else {
-		var userSquare = userInput;
-		$('#wrapper').empty();	
-	}
+if (isNaN(userInput)===true || (userInput === null)) {
+	alert ("You did not enter a number. Please input a number up to 100 to create a new sketchpad");
+} else if (userInput > 100) {
+	alert ("Please enter a number under 100");
+} else {
+	var userSquare = userInput;
+	$('#wrapper').empty();	
+}
 	
 var rows = userSquare;
 var columns = userSquare;
@@ -54,10 +54,10 @@ var dimension = 640/userSquare;
 
 for (var i = 0; i < columns; i++) {
     $row.append($square.clone());
-    }
+	}
 for (var i = 0; i < rows; i++) {
-        $("#wrapper").append($row.clone());
-    }
+    $("#wrapper").append($row.clone());
+}
 
 $('.square').hover(function() {
 	$(this).css("background-color","black");
